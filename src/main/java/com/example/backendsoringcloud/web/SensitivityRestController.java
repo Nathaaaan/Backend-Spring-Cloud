@@ -1,11 +1,11 @@
-package web;
+package com.example.backendsoringcloud.web;
 
-import entities.Sensitivity;
+import com.example.backendsoringcloud.entities.Sensitivity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import services.SensitivityService;
+import com.example.backendsoringcloud.services.SensitivityService;
 
 import java.util.List;
 

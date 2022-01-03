@@ -1,7 +1,7 @@
-package services;
+package com.example.backendsoringcloud.services;
 
-import dao.SensitivityRepository;
-import entities.Sensitivity;
+import com.example.backendsoringcloud.entities.Sensitivity;
+import com.example.backendsoringcloud.dao.SensitivityRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

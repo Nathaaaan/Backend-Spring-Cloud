@@ -1,4 +1,4 @@
-package entities;
+package com.example.backendsoringcloud.entities;
 
 import org.springframework.lang.NonNull;
 
