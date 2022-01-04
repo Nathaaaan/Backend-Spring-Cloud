@@ -11,5 +11,10 @@ Pour y accéder via pgAdmin il faut se connecter sur localhost:12321, et ce sera
 
 Le nom d'utilisateur et le mot de passe de l'utilisateur root de la base de donnée sont postgres/rootpass
 
+Pour build il faut faire :
 
+./gradlew clean build
 
+docker build -t backspringcloud .
+
+docker run -it -p 12322:8080 backspringcloud
