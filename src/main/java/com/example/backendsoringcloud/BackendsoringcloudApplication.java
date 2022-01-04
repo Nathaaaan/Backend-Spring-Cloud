@@ -27,7 +27,7 @@ public class BackendsoringcloudApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
         System.out.println("Application is running in console");
-        //sensitivityRepository.save(new Sensitivity("Warzone", 6.9, "16/9"));
-        //TODO Code here
+        //sensitivityRepository.save(new Sensitivity("CoD: Vanguard", 6.9, "16/9", "Natix"));
+        //sensitivityRepository.save(new Sensitivity("CoD: Vanguard", 7.0, "16/9", "Nekto"));
     }
 }

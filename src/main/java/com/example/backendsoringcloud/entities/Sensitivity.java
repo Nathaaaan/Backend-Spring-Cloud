@@ -27,6 +27,9 @@ public class Sensitivity implements Serializable {
     @NonNull
     private String resolutionValue;
 
+    @NonNull
+    private String playerName;
+
     public int getQuestionId() {
         return questionId;
     }
@@ -61,35 +64,23 @@ public class Sensitivity implements Serializable {
         this.resolutionValue = resolutionValue;
     }
 
+    @NonNull
+    public String getPlayerName() {
+        return playerName;
+    }
+
+    public void setPlayerName(@NonNull String playerName) {
+        this.playerName = playerName;
+    }
+
     public Sensitivity() {
     }
 
-    public Sensitivity(@NonNull String gameName, double sensitivityValue, @NonNull String resolutionValue) {
+    public Sensitivity(@NonNull String gameName, double sensitivityValue, @NonNull String resolutionValue, @NonNull String playerName) {
         this.gameName = gameName;
         this.sensitivityValue = sensitivityValue;
         this.resolutionValue = resolutionValue;
+        this.playerName = playerName;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Sensitivity that = (Sensitivity) o;
-        return getQuestionId() == that.getQuestionId() && Double.compare(that.getSensitivityValue(), getSensitivityValue()) == 0 && getGameName().equals(that.getGameName()) && getResolutionValue().equals(that.getResolutionValue());
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(getQuestionId(), getGameName(), getSensitivityValue(), getResolutionValue());
-    }
-
-    @Override
-    public String toString() {
-        return "Sensitivity{" +
-                "questionId=" + questionId +
-                ", gameName='" + gameName + '\'' +
-                ", sensitivityValue=" + sensitivityValue +
-                ", resolutionValue='" + resolutionValue + '\'' +
-                '}';
-    }
 }

@@ -38,16 +38,16 @@ public class SensitivityRestController {
     }
 
     @CrossOrigin(origins = "*")
-    @RequestMapping(method = RequestMethod.POST, produces = "application/json", params = {"gameName", "sensitivityValue", "resolutionValue"})
-    Sensitivity newSensitivity(@RequestParam String gameName, @RequestParam double sensitivityValue, @RequestParam String resolutionValue) {
+    @RequestMapping(method = RequestMethod.POST, produces = "application/json", params = {"gameName", "sensitivityValue", "resolutionValue", "playerName"})
+    Sensitivity newSensitivity(@RequestParam String gameName, @RequestParam double sensitivityValue, @RequestParam String resolutionValue, @RequestParam String playerName) {
 
-        return sensitivityService.newSensitivity(gameName, sensitivityValue, resolutionValue);
+        return sensitivityService.newSensitivity(gameName, sensitivityValue, resolutionValue, playerName);
     }
 
     @CrossOrigin(origins = "*")
-    @RequestMapping(method = RequestMethod.PUT, produces = "application/json", params = {"questionId" , "gameName", "sensitivityValue", "resolutionValue"})
-    Sensitivity replaceSensitivity(@RequestParam int questionId, @RequestParam String gameName, @RequestParam double sensitivityValue, @RequestParam String resolutionValue) {
-        return sensitivityService.replaceSensitivity(questionId, gameName, sensitivityValue, resolutionValue);
+    @RequestMapping(method = RequestMethod.PUT, produces = "application/json", params = {"questionId" , "gameName", "sensitivityValue", "resolutionValue", "playerName"})
+    Sensitivity replaceSensitivity(@RequestParam int questionId, @RequestParam String gameName, @RequestParam double sensitivityValue, @RequestParam String resolutionValue, @RequestParam String playerName) {
+        return sensitivityService.replaceSensitivity(questionId, gameName, sensitivityValue, resolutionValue, playerName);
     }
 
     @CrossOrigin(origins = "*")

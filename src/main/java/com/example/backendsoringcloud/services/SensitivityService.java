@@ -34,22 +34,23 @@ public class SensitivityService {
         return sensitivityRepository.findById(id);
     }
 
-    public Sensitivity newSensitivity(String gameName, double sensitivityValue, String resolutionValue) {
+    public Sensitivity newSensitivity(String gameName, double sensitivityValue, String resolutionValue, String playerName) {
 
-        Sensitivity newSensitivity = new Sensitivity(gameName, sensitivityValue, resolutionValue);
+        Sensitivity newSensitivity = new Sensitivity(gameName, sensitivityValue, resolutionValue, playerName);
         return sensitivityRepository.save(newSensitivity);
     }
 
-    public Sensitivity replaceSensitivity(int questionId, String gameName, double sensitivityValue, String resolutionValue) {
+    public Sensitivity replaceSensitivity(int questionId, String gameName, double sensitivityValue, String resolutionValue, String playerName) {
 
         return sensitivityRepository.findById(questionId)
                 .map(sensitivity ->{
                     sensitivity.setGameName(gameName);
                     sensitivity.setSensitivityValue(sensitivityValue);
                     sensitivity.setResolutionValue(resolutionValue);
+                    sensitivity.setPlayerName(playerName);
                     return sensitivityRepository.save(sensitivity);
                 }).orElseGet(() -> {
-                    Sensitivity newSensitivity = new Sensitivity(gameName, sensitivityValue, resolutionValue);
+                    Sensitivity newSensitivity = new Sensitivity(gameName, sensitivityValue, resolutionValue, playerName);
                     newSensitivity.setQuestionId(questionId);
                     return sensitivityRepository.save(newSensitivity);
                 });
