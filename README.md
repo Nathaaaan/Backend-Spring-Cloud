@@ -44,8 +44,6 @@ With the API it's possible to:
 * Delete a sensitivity (DELETE Method)
 
 
-Use the `BLANK_README.md` to get started.
-
 <p align="right">(<a href="#top">Back to top of page</a>)</p>
 
 
