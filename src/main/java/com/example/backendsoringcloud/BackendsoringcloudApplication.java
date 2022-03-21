@@ -1,7 +1,7 @@
 package com.example.backendsoringcloud;
 
 import com.example.backendsoringcloud.dao.SensitivityRepository;
-import com.example.backendsoringcloud.entities.Sensitivity;
+//import com.example.backendsoringcloud.entities.Sensitivity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -9,8 +9,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
 public class BackendsoringcloudApplication implements CommandLineRunner {
-    //TODO Les classes et repositories
-    //TODO Code here
+
+    //TODO Le readme
 
     @Autowired
     private SensitivityRepository sensitivityRepository;

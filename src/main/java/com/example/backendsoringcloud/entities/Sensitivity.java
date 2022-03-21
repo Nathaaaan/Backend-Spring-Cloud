@@ -7,8 +7,10 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import java.io.Serializable;
-import java.util.Objects;
 
+/**
+ * This class represents the sensitivity Entity
+ */
 @Entity
 public class Sensitivity implements Serializable {
 
