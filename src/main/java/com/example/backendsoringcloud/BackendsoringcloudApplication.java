@@ -10,8 +10,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class BackendsoringcloudApplication implements CommandLineRunner {
 
-    //TODO Le readme
-
     @Autowired
     private SensitivityRepository sensitivityRepository;
 
