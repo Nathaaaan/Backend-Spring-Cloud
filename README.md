@@ -50,7 +50,6 @@ With the API it's possible to:
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [Java](https://www.java.com/fr/)
 * [Spring Boot](https://spring.io/projects/spring-boot)
